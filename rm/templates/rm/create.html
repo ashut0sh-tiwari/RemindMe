@@ -1,0 +1,17 @@
+{% extends 'rm/main.html' %}
+{% block content %}
+<div class="header-bar">
+    <a href="/">&#8592; Back</a>
+</div>
+
+<div class="card-body">
+    <form method="POST" action=''>
+        {% csrf_token %}
+        {% comment %} autamatically makes form using this form value {% endcomment %}
+        {{form.as_p}} 
+        <input type="submit" class="button" value="submit" href="/">
+    </form>
+
+</div>
+
+{% endblock content %}
