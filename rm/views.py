@@ -42,7 +42,7 @@ class HomeRegister(FormView):
 
     def get(self, *args, **kwargs):
         if self.request.user.is_authenticated:
-            return redirect('homelost')
+            return redirect('homelist')
         return super(HomeRegister, self).get(*args, **kwargs)
 
 
